@@ -23,7 +23,21 @@ List<Veiculo> veiculos = [
   Veiculo(marca: "BMW", modelo: "X5", ano: 2022),
   Veiculo(marca: "Mercedes-Benz", modelo: "C-Class", ano: 2022),
   Veiculo(marca: "Audi", modelo: "A4", ano: 2022),
-  Veiculo(marca: "Volkswagen", modelo: "Golf", ano: 2022)
+  Veiculo(marca: "Volkswagen", modelo: "Golf", ano: 2022),
+  Veiculo(marca: "Toyota", modelo: "Corolla", ano: 2022),
+  Veiculo(marca: "Honda", modelo: "Civic", ano: 2022),
+  Veiculo(marca: "Subaru", modelo: "Impreza", ano: 2022),
+  Veiculo(marca: "Ford", modelo: "Focus", ano: 2022),
+  Veiculo(marca: "Chevrolet", modelo: "Camaro", ano: 2022),
+  Veiculo(marca: "Nissan", modelo: "Sentra", ano: 2022),
+  Veiculo(marca: "Hyundai", modelo: "Elantra", ano: 2022),
+  Veiculo(marca: "Kia", modelo: "Sportage", ano: 2022),
+  Veiculo(marca: "Mazda", modelo: "CX-5", ano: 2022),
+  Veiculo(marca: "Tesla", modelo: "Model S", ano: 2022),
+  Veiculo(marca: "BMW", modelo: "X5", ano: 2022),
+  Veiculo(marca: "Mercedes-Benz", modelo: "C-Class", ano: 2022),
+  Veiculo(marca: "Audi", modelo: "A4", ano: 2022),
+  Veiculo(marca: "Volkswagen", modelo: "Golf", ano: 2022),
 ];
 
   @override
@@ -43,8 +57,10 @@ List<Veiculo> veiculos = [
           FloatingActionButton(onPressed: (){}, child: Icon(Icons.access_alarm),)
         ],
       ),
-      body: Column(
-        children: veiculos.map(veiculo => construirItemVeiculo(veiculo)).toList(),
+      body: SingleChildScrollView(
+        child: Column(
+          children: veiculos.map<Widget>((veiculo) => construirItemVeiculo(veiculo)).toList(),
+        ),
       ),
     );
   }
